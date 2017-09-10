@@ -1,25 +1,27 @@
 
 /**
- *Esta clase representa objetos circulo con un radio 
+ *Esta clase representa objetos triangulo con una base y una altura
  */
-public class Circulo extends Figura
+public class Triangulo extends Figura
 {
-    private float radio;
+    private float base;
+    private float altura;
     /**
      * Constructor 
      */
-    public Circulo(float unRadio)
+    public Triangulo(float unaBase, float unaAltura)
     {
-        radio=unRadio;
+        base = unaBase;
+        altura = unaAltura;
     }
     
     /** 
-     * metodo para calcular el area de un circulo
+     * metodo para calcular el area de un triangulo
      */
     @Override //se avisa al compilador que si se escribe mal el metodo, avise
     public void calcularArea()
     {
-        area= 3.14f * radio * radio;//se pone f para decirle al compilador que est float
+        area= (base*altura)/2;
     }
     
     /** 
@@ -28,6 +30,8 @@ public class Circulo extends Figura
     @Override //se avisa al compilador que si se escribe mal el metodo, avise
     public void calcularPerimetro()
     {
-        perimetro = 2 * 3.14f * radio;//se pone f para decirle al compilador que est float
+        perimetro = (2*altura) + base;
     }
+    
+    
 }
